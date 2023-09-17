@@ -10,6 +10,7 @@ const slide2 = document.querySelector(
 const slide3 = document.querySelector(
   "body > div > div > div.content > div.buttons > label:nth-child(4)"
 );
+
 const image0 = document.querySelector(
   "body > div > div > div.gif > img:nth-child(1)"
 );
@@ -22,28 +23,58 @@ const image2 = document.querySelector(
 const image3 = document.querySelector(
   "body > div > div > div.gif > img:nth-child(4)"
 );
+
 const text = document.querySelector(
   "body > div > div > div.content > div.text > p"
 );
+
+const radio0 = document.querySelector(
+  "body > div > div > div.content > div.buttons > label:nth-child(1) > span > span"
+);
+const radio1 = document.querySelector(
+  "body > div > div > div.content > div.buttons > label:nth-child(2) > span > span"
+);
+const radio2 = document.querySelector(
+  "body > div > div > div.content > div.buttons > label:nth-child(3) > span > span"
+);
+const radio3 = document.querySelector(
+  "body > div > div > div.content > div.buttons > label:nth-child(4) > span > span"
+);
+
 slide0.addEventListener("click", () => {
-  // Добавляем классы для анимации
   image0.classList.add("hidden");
+  radio0.classList.remove("radio");
+  radio0.classList.add("radio-active");
+  radio1.classList.add("radio");
+  radio2.classList.add("radio");
+  radio3.classList.add("radio");
+
   transform0();
 });
 slide1.addEventListener("click", () => {
-  // Добавляем классы для анимации
   image0.classList.add("hidden");
+  radio0.classList.remove("radio-active");
+  radio0.classList.add("radio");
+  radio1.classList.remove("radio");
+  radio2.classList.add("radio");
+  radio3.classList.add("radio");
   transform1();
 });
 
 slide2.addEventListener("click", () => {
-  // Добавляем классы для анимации
   image0.classList.add("hidden");
+  radio1.classList.remove("radio-active");
+  radio1.classList.add("radio");
+  radio2.classList.remove("radio");
+  radio0.classList.add("radio");
+  radio3.classList.add("radio");
   transform2();
 });
 slide3.addEventListener("click", () => {
-  // Добавляем классы для анимации
   image0.classList.add("hidden");
+  radio2.classList.remove("radio-active");
+  radio2.classList.add("radio");
+  radio3.classList.remove("radio");
   transform3();
 });
 
