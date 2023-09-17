@@ -27,12 +27,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 4px;
+
 }
 .gif img {
   width: 95%;
   height: 200px;
   border-radius: 15px;
 }
+
+.text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 85vw;
+    margin-left: 15px;
+}
+.text p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+
 body > div > div > div > img:nth-child(2){
     display: none;
     opacity: 0;
@@ -79,6 +95,22 @@ body > div > div > div > img:nth-child(3){
       height: 475px;
       border-radius: 15px;
     }
+    .text {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        margin-left: 3vw;
+    }
+    .text p{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #ffffff;
+    }
+    
+
+
+
+
     body > div > div > div > img:nth-child(2){
         display: none;
         opacity: 0;
