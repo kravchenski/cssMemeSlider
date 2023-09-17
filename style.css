@@ -42,8 +42,6 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 19vw;
-  margin-left: 15px;
 }
 .text p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -51,14 +49,14 @@ body {
 }
 
 .content {
+  width: 100vw;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .buttons {
-  width: 86vw;
-  margin-right: 3vw;
   display: flex;
   justify-content: center;
 }
@@ -76,12 +74,30 @@ body {
   border: 2px solid rgb(111, 111, 216);
   border-radius: 50%;
   margin-right: 5px;
+  transition: 0.7s;
 }
+.radio-indicator:hover{
+  border: 2px solid #ffffff;
 
-input[type="radio"]:checked + .custom-radio .radio-indicator {
-  background-color: purple;
 }
-
+.radio-indicator .radio {
+  width: 16px;
+  height: 16px;
+  background-color:rgb(111, 111, 216);
+  border-radius: 50%; /* Добавляем скругление, чтобы сделать его круглым */
+  display: inline-block; /* Делаем его видимым и круглым */
+  transition: 0.7s;
+}
+.radio-indicator .radio-active {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%; /* Добавляем скругление, чтобы сделать его круглым */
+  display: inline-block; /* Делаем его видимым и круглым */
+  transition: 0.7s;
+}
+.radio-indicator .radio:hover{
+  background-color: #ffffff;
+}
 body > div > div > div > img:nth-child(2) {
   display: none;
   opacity: 0;
@@ -130,12 +146,16 @@ body > div > div > div > img:nth-child(4) {
     height: 475px;
     border-radius: 15px;
   }
+  .content{
+    flex-direction: row-reverse;
+    width: 80vw;
+    justify-content: stretch;
+  }
   .text {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 79vw;
-    margin-left: 3vw;
+    width: 75vw;
   }
   .text p {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
