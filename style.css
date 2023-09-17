@@ -15,108 +15,132 @@ body {
 }
 
 .main {
-  height: 290px;
+  height: 330px;
   width: 100vw;
   background-color: #332b2b;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .gif {
   overflow: hidden;
-  margin: 30px 0;
-  width: 100%;
-  display: flex;
+  margin: 15px 0;
+  display: flex; /* Располагаем изображения в строку */
   align-items: center;
   justify-content: center;
-  margin-bottom: 4px;
+  margin-bottom: 25px;
 
 }
 .gif img {
-  width: 95%;
+  width: 79vw;
   height: 200px;
   border-radius: 15px;
 }
-
 .text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 19vw;
+  margin-left: 15px;
+}
+.text p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.buttons {
+  width: 86vw;
+  margin-right: 3vw;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.radio-indicator {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgb(111, 111, 216);
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+input[type="radio"]:checked + .custom-radio .radio-indicator {
+  background-color: purple;
+}
+
+body > div > div > div > img:nth-child(2) {
+  display: none;
+  opacity: 0;
+}
+body > div > div > div > img:nth-child(3) {
+  display: none;
+  opacity: 0;
+}
+body > div > div > div > img:nth-child(4) {
+  display: none;
+  opacity: 0;
+}
+
+@media screen and (min-width: 600px) {
+  html,
+  body {
+    height: 100%;
+    overflow-y: hidden;
+    margin: 0px;
+  }
+
+  .container {
+    height: 100%;
+    background-color: #ffffff;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main {
+    height: 600px;
+    width: 85vw;
+    background-color: #332b2b;
+    border-radius: 10px;
+  }
+  .gif {
+    overflow: hidden;
+    margin: 30px 0;
+    display: flex; /* Располагаем изображения в строку */
+    align-items: center;
+    justify-content: center;
+  }
+  .gif img {
+    width: 79vw;
+    height: 475px;
+    border-radius: 15px;
+  }
+  .text {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 85vw;
-    margin-left: 15px;
-}
-.text p{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 79vw;
+    margin-left: 3vw;
+  }
+  .text p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
-}
+    font-size: 18px;
+  }
 
-
-body > div > div > div > img:nth-child(2){
-    display: none;
-    opacity: 0;
-}
-body > div > div > div > img:nth-child(3){
-    display: none;
-    opacity: 0;
-}
-
-
-@media screen and (min-width: 600px) {
-    html,
-    body {
-      height: 100%;
-      overflow-y: hidden;
-      margin: 0px;
-    }
-    
-    .container {
-      height: 100%;
-      background-color: #ffffff;
-      margin: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .main {
-      height: 600px;
-      width: 85vw;
-      background-color: #332b2b;
-      border-radius: 10px;
-    }
-    .gif {
-      overflow: hidden;
-      margin: 30px 0;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .gif img {
-      width: 79vw;
-      height: 475px;
-      border-radius: 15px;
-    }
-    .text {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        width: 100%;
-        margin-left: 3vw;
-    }
-    .text p{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #ffffff;
-    }
-    
-
-
-
-
-    body > div > div > div > img:nth-child(2){
-        display: none;
-        opacity: 0;
-    }
-    body > div > div > div > img:nth-child(3){
-        display: none;
-        opacity: 0;
-    }
 }
